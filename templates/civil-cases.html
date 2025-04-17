@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="kk">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Азаматтық істер бойынша даулар</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="../styles/general-styles.css"/>
+  <style>
+    .accordion-button {
+      font-size: 2rem;
+      font-weight: 500;
+      color: #2A446F;
+    }
+    .accordion-body {
+      font-size: 1.6rem;
+      color: #424242;
+    }
+    .accordion-item {
+      border: none;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container py-5">
+    <h1 class="text-center mb-5">Азаматтық істер бойынша даулар</h1>
+
+    <div class="accordion" id="civilLawAccordion">
+      <!-- Азаматтық-құқықтық даулар -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingOne">
+          <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            1. Азаматтық-құқықтық даулар
+          </button>
+        </h2>
+        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#civilLawAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>Мүліктік даулар (қарызды өндіру, мүлікке меншік құқығын тану, залалды өтеу)</li>
+              <li>Шарттық міндеттемелерден туындайтын даулар (келісімшарттарды орындамау немесе дұрыс орындамау)</li>
+              <li>Еңбек даулары (жұмыстан заңсыз босату, жалақыны төлемеу)</li>
+              <li>Авторлық және зияткерлік меншік құқықтарына қатысты даулар</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Отбасылық істер -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingTwo">
+          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            2. Отбасылық істер
+          </button>
+        </h2>
+        <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#civilLawAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>Некені бұзу (ажырасу)</li>
+              <li>Ата-ана құқықтарынан айыру немесе шектеу</li>
+              <li>Алимент өндіріп алу</li>
+              <li>Балалардың тұрғылықты жерін анықтау</li>
+              <li>Мүлікті бөлу (ерлі-зайыптылар арасында)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Мұрагерлік даулар -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingThree">
+          <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            3. Мұрагерлік даулар
+          </button>
+        </h2>
+        <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#civilLawAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>Мұрагерлікке құқықты тану</li>
+              <li>Мұрагерлер арасында мүлікті бөлу</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Моралдық зиянды өтеу -->
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="headingFour">
+          <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+            4. Моралдық зиянды өтеу
+          </button>
+        </h2>
+        <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#civilLawAccordion">
+          <div class="accordion-body">
+            <ul>
+              <li>Ар-намыс, қадір-қасиет және іскерлік беделді қорғау</li>
+              <li>Жалған ақпаратты теріске шығару</li>
+              <li>Денсаулыққа зиян келтіру салдарынан өтемақы өндіру</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-5">
+      <a href="../index.html#civil-law" class="btn btn-kaz">🔙 Басты бетке оралу</a>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

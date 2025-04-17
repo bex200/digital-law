@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Соттылықты анықтау</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/general-styles.css">
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+
+        .section-title {
+            color: #2A446F;
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .accordion-button {
+            font-size: 1.8rem;
+            font-weight: 500;
+            color: #2A446F;
+        }
+
+        .accordion-body {
+            font-size: 1.6rem;
+            color: #424242;
+        }
+
+        .card {
+            border-left: 4px solid #D2A529;
+            border-radius: 0;
+        }
+
+        .icon-heading {
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 2rem;
+        }
+
+        .icon-heading img {
+            width: 28px;
+            height: 28px;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.8s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #searchBox {
+            font-size: 1.6rem;
+            padding: 0.75rem 1.25rem;
+            border: 2px solid #D2A529;
+            border-radius: 6px;
+            width: 100%;
+            margin-bottom: 2rem;
+        }
+
+        #no-results {
+            display: none;
+            font-size: 1.6rem;
+            color: #616161;
+            text-align: center;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container py-5 fade-in">
+        <h1 class="text-center mb-4">Соттылықты анықтау</h1>
+        <p class="lead mb-5 text-center">Азаматтық істер бойынша талапарызды дұрыс жолдау үшін соттылықты дұрыс
+            анықтаудың маңызы зор.</p>
+        <input type="text" id="searchBox" placeholder="🔍 Іздеу: мысалы, 'мүлік', 'алимент', 'АПК 31-бап'...">
+        <div class="accordion" id="jurisdictionAccordion">
+
+            <!-- Жалпы ақпарат -->
+            <div class="accordion-item card mb-4">
+                <h2 class="accordion-header" id="gen-info">
+                    <button class="accordion-button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseGenInfo">
+                        📌 Жалпы ақпарат
+                    </button>
+                </h2>
+                <div id="collapseGenInfo" class="accordion-collapse collapse show"
+                    data-bs-parent="#jurisdictionAccordion">
+                    <div class="accordion-body">
+                        <p>Қазақстан Республикасының Азаматтық процестік кодексінің (АПК) негізінде соттылық анықталады.
+                            Бұл талап арызды дұрыс сот органына бағыттауға көмектеседі.</p>
+                        <ul>
+                            <li>• Даудың мәнін нақты анықтау</li>
+                            <li>• Тараптардың тұрғылықты жерін ескеру</li>
+                            <li>• Талапарызда нақты әрі толық ақпарат беру</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Мүліктік даулар -->
+            <div class="accordion-item card mb-4">
+                <h2 class="accordion-header" id="property">
+                    <button class="accordion-button " data-bs-toggle="collapse"
+                        data-bs-target="#collapseProperty">
+                        🏠 Мүліктік даулар
+                    </button>
+                </h2>
+                <div id="collapseProperty" class="accordion-collapse collapse show" data-bs-parent="#jurisdictionAccordion">
+                    <div class="accordion-body">
+                        <p>ҚР АПК-нің 31-бабының 1-бөлігіне сәйкес, талапарыз мүліктің орналасқан мекенжайы бойынша
+                            беріледі.</p>
+                        <strong>Мысал:</strong> Мүлік Астана қаласында орналасқан болса, талапарыз Астана қаласының
+                        сотына жолданады.
+                    </div>
+                </div>
+            </div>
+
+            <!-- Отбасылық даулар -->
+            <div class="accordion-item card mb-4">
+                <h2 class="accordion-header" id="family">
+                    <button class="accordion-button " data-bs-toggle="collapse"
+                        data-bs-target="#collapseFamily">
+                        👨‍👩‍👧 Отбасылық даулар
+                    </button>
+                </h2>
+                <div id="collapseFamily" class="accordion-collapse collapse show" data-bs-parent="#jurisdictionAccordion">
+                    <div class="accordion-body">
+                        <p>ҚР АПК-нің 30-бабының 4-бөлігіне сәйкес, талап қоюшының тұрғылықты жері бойынша сотта
+                            қаралады.</p>
+                        <p><strong>Мысал:</strong> Талап қоюшы Алматыда тұрса, алиментке қатысты талап арыз Алматы
+                            қаласында қаралады.</p>
+                        <p>Егер кәмелетке толмаған бала мәселесі қозғалса — іс мамандандырылған ауданаралық сотқа
+                            жолданады.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Мұрагерлік даулар -->
+            <div class="accordion-item card mb-4">
+                <h2 class="accordion-header" id="inheritance">
+                    <button class="accordion-button " data-bs-toggle="collapse"
+                        data-bs-target="#collapseInheritance">
+                        🧾 Мұрагерлік даулар
+                    </button>
+                </h2>
+                <div id="collapseInheritance" class="accordion-collapse collapse show"
+                    data-bs-parent="#jurisdictionAccordion">
+                    <div class="accordion-body">
+                        <p>ҚР АПК-нің 31-бабының 2 және 3-бөліктеріне сәйкес, мұрагерлік істер мұра орналасқан жердегі
+                            сотта қаралады.</p>
+                        <ul>
+                            <li>• Қарызды өтеу туралы талап мұра орналасқан жерге беріледі.</li>
+                            <li>• Мұраны қабылдау/бас тарту туралы да сол жерге жіберіледі.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Некелік/корпоративтік даулар -->
+            <div class="accordion-item card mb-4">
+                <h2 class="accordion-header" id="marriage-corp">
+                    <button class="accordion-button " data-bs-toggle="collapse"
+                        data-bs-target="#collapseMarriageCorp">
+                        ⚖️ Некені бұзу және корпоративтік даулар
+                    </button>
+                </h2>
+                <div id="collapseMarriageCorp" class="accordion-collapse collapse show"
+                    data-bs-parent="#jurisdictionAccordion">
+                    <div class="accordion-body">
+                        <p>Ажырасу талаптары жауапкердің мекенжайы бойынша жіберіледі. Корпоративтік даулар
+                            мамандандырылған экономикалық сотта қаралады.</p>
+                        <p><strong>Мысал:</strong> Егер компания серіктесі басқа серіктеске қарсы талап қойса, іс арнайы
+                            экономикалық сотта қаралады.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Заң баптарының тізімі -->
+            <div class="accordion-item card mb-4">
+                <h2 class="accordion-header" id="laws">
+                    <button class="accordion-button " data-bs-toggle="collapse" data-bs-target="#collapseLaws">
+                        📚 ҚР АПК баптарына шолу
+                    </button>
+                </h2>
+                <div id="collapseLaws" class="accordion-collapse collapse show" data-bs-parent="#jurisdictionAccordion">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>26-бап — Аудандық соттардың істері</li>
+                            <li>27-бап — Мамандандырылған соттарға жататын істер</li>
+                            <li>27-1, 28-1-бап — Облыстық/Жоғарғы Соттың қарауы</li>
+                            <li>29-бап — Жауапкердің орналасқан жері</li>
+                            <li>30-бап — Талап қоюшы таңдауы</li>
+                            <li>31-бап — Айрықша соттылық</li>
+                            <li>32-бап — Шарттық соттылық келісімдері</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="text-center mt-5">
+            <a href="../index.html#court-check" class="btn btn-kaz">🔙 Басты бетке оралу</a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script>
+    const searchBox = document.getElementById('searchBox');
+    const accordionItems = document.querySelectorAll('.accordion-item');
+    const noResults = document.getElementById('no-results');
+
+    searchBox.addEventListener('input', () => {
+        const query = searchBox.value.toLowerCase();
+        let anyVisible = false;
+
+        accordionItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            if (text.includes(query)) {
+                item.style.display = 'block';
+                anyVisible = true;
+            } else {
+                item.style.display = 'none';
+            }
+        });
+
+        noResults.style.display = anyVisible ? 'none' : 'block';
+    });
+</script>
+
+</html>

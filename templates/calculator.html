@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Мемлекеттік баж калькуляторы</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/general-styles.css">
+    <style>
+        body {
+            background-color: #f4f6f8;
+        }
+
+        h1,
+        h2 {
+            color: #2A446F;
+        }
+
+        .calculator-section {
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .result-box {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #2A446F;
+            background-color: #e9f5ff;
+            border-left: 5px solid #D2A529;
+            padding: 1rem 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .warning-text {
+            font-size: 1.6rem;
+            color: #c0392b;
+            margin-top: 1rem;
+        }
+
+        label {
+            font-size: 1.6rem;
+            font-weight: 500;
+            margin-top: 1rem;
+        }
+
+        input,
+        select {
+            font-size: 1.6rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            border: 1px solid #ccc;
+        }
+
+        .info-block,
+        .guide-block {
+            font-size: 1.5rem;
+            background-color: #fffbe6;
+            padding: 1.5rem;
+            border-left: 5px solid #D2A529;
+            margin-bottom: 2rem;
+            color: #5a5a5a;
+        }
+
+        .disclaimer {
+            font-size: 1.4rem;
+            color: #777;
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .form-select {
+            font-size: 1.6rem;
+            padding: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-4">💼 Мемлекеттік баж калькуляторы</h1>
+
+        <div class="info-block">
+            <h4>3-бөлім. Мемлекеттік баж деген не?</h4>
+            <p>Мемлекеттік баж — бұл азаматтар мен заңды тұлғалар мемлекеттік органдар көрсететін қызметтер үшін
+                төлейтін міндетті төлем. Ол ҚР Салық кодексімен реттеледі.</p>
+            <ul>
+                <li>Жеке тұлғалар үшін — талап сомасының <strong>1%</strong>, максимум <strong>10 000 АЕК</strong></li>
+                <li>Заңды тұлғалар үшін — талап сомасының <strong>3%</strong>, максимум <strong>20 000 АЕК</strong></li>
+            </ul>
+            <p>Бұл төлемдер мемлекеттік органдардың жұмысын қамтамасыз етеді және азаматтардың құқықтарын жүзеге асыруға
+                мүмкіндік береді.</p>
+        </div>
+
+        <div class="guide-block">
+            <h4>4-бөлім. Мемлекеттік баж калькуляторына нұсқаулық</h4>
+            <ol>
+                <li>Тұлға түрін таңдаңыз: жеке немесе заңды.</li>
+                <li>Өндіргіңіз келетін соманы енгізіңіз.</li>
+                <li class="body-large-regular">АЕК мөлшерін енгізіңіз (мысалы, 3450).</li>
+            </ol>
+            <p><strong>Мысалдар:</strong></p>
+            <ul>
+                <li>Заңды тұлға үшін 1 000 000 ₸ → баж = 30 000 ₸</li>
+                <li>Жеке тұлға үшін 1 000 000 ₸ → баж = 10 000 ₸</li>
+            </ul>
+            <p><strong>Маңызды ескертулер:</strong></p>
+            <ul>
+                <li>Калькулятор тек ҚР СК 610-баптың 1-тармағына негізделген.</li>
+                <li>Баж мөлшері шекті сомадан аспауы тиіс.</li>
+                <li>АЕК мөлшерін қолданушы өзі енгізуі қажет (ол жыл сайын өзгеріп отырады).</li>
+            </ul>
+        </div>
+
+        <div class="calculator-section">
+            <form id="dutyForm">
+                <div class="mb-3">
+                    <label for="userType">Тұлға түрі:</label>
+                    <select class="form-select" id="userType" required>
+                        <option value="">Таңдаңыз</option>
+                        <option value="individual">Жеке тұлға</option>
+                        <option value="company">Заңды тұлға</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="claimAmount">Талап сомасы (₸):</label>
+                    <input type="number" class="form-control body-large-regular" id="claimAmount" min="0"
+                        placeholder="Мысалы: 1000000" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="aekAmount">АЕК мөлшері (₸):</label>
+                    <input type="number" class="form-control body-large-regular" id="aekAmount" required>
+                </div>
+
+
+                <button type="submit" class="btn btn-kaz mt-3">Есептеу</button>
+            </form>
+
+            <div id="resultBox" class="result-box"></div>
+            <div id="warningBox" class="warning-text"></div>
+
+        </div>
+
+        <div class="disclaimer">
+            ⚠️ Бұл калькулятор ҚР СК 610-баптың 1-тармағына ғана негізделген.<br>
+            610-баптың өзге тармақтары бойынша есеп жүргізілмейді.
+        </div>
+    </div>
+    <div class="text-center mt-5">
+        <a href="../index.html#court-check" class="btn btn-kaz">🔙 Басты бетке оралу</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("dutyForm");
+            const userTypeSelect = document.getElementById("userType");
+            const claimInput = document.getElementById("claimAmount");
+            const aekInput = document.getElementById("aekAmount");
+            const resultBox = document.getElementById("resultBox");
+            const warningBox = document.getElementById("warningBox");
+
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                const userType = userTypeSelect.value;
+                const claimAmount = parseFloat(claimInput.value);
+                const aekValue = parseFloat(aekInput.value);
+
+                if (!userType || isNaN(claimAmount) || isNaN(aekValue) || claimAmount <= 0 || aekValue <= 0) {
+                    resultBox.innerText = "";
+                    warningBox.innerText = "Барлық өрістерді дұрыс толтырыңыз.";
+                    return;
+                }
+
+                let rate = userType === "individual" ? 0.01 : 0.03;
+                let maxAekLimit = userType === "individual" ? 10000 : 20000;
+                let maxDuty = maxAekLimit * aekValue;
+
+                let duty = claimAmount * rate;
+
+                if (duty > maxDuty) {
+                    resultBox.innerText = "";
+                    warningBox.innerText = `Кешіріңіз, мемлекеттік баж мөлшері шекті сомадан асты.\nСіз енгізген баж: ${Math.round(duty).toLocaleString("kk-KZ")} ₸\nРұқсат етілетін максимум: ${Math.round(maxDuty).toLocaleString("kk-KZ")} ₸`;
+                    return;
+                }
+
+                resultBox.innerText = `✅ Мемлекеттік баж сомасы: ${Math.round(duty).toLocaleString("kk-KZ")} ₸`;
+                warningBox.innerText = "";
+            });
+        });
+    </script>
+
+</body>
+
+</html>

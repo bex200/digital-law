@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="kk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Біз туралы</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/general-styles.css">
+    <style>
+        body {
+            background: #f4f4f4;
+            font-family: 'EB Garamond', serif;
+        }
+
+        h1 {
+            color: #2A446F;
+            font-size: 3rem;
+        }
+
+        .team-section {
+            padding: 4rem 0;
+        }
+
+        .flip-card {
+            background-color: transparent;
+            width: 100%;
+            height: 350px;
+            perspective: 1000px;
+            margin-bottom: 2rem;
+        }
+
+        .flip-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            transition: transform 0.8s;
+            transform-style: preserve-3d;
+        }
+
+
+        .flip-card:hover .flip-card-inner {
+            transform: rotateY(180deg);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .flip-card .flip-card-inner {
+            transition: transform 0.8s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+        .flip-card-front,
+        .flip-card-back {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .flip-card-front {
+            background-color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 1.5rem;
+        }
+
+        .flip-card-front img {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        .flip-card-back {
+            background-color: #D2A529;
+            color: white;
+            transform: rotateY(180deg);
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            font-size: 1.4rem;
+        }
+
+        .intro {
+            font-size: 1.6rem;
+            color: #444;
+            background: #fff;
+            border-left: 5px solid #D2A529;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 3rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container team-section">
+        <h1 class="text-center mb-4">👨‍🎓 Біз туралы</h1>
+
+        <div class="intro">
+            Бұл проект басында MNU университетінің “Құқық саласындағы цифрлық жоба” пәнінен бастау алған болатын.
+            Тобымызбен бірге көп ойланып, Азаматтық құқық саласындағы цифрлық жоба тақырыбын таңдадық.
+            Біздің мақсатымыз — азаматтық құқықтағы күрделі мәселелерді қарапайым әрі қолжетімді форматта түсіндіру,
+            сонымен қатар цифрлық шешімдер арқылы құқықтық сауаттылықты арттыру. Осы жобаны жасау барысында біз тек
+            теориялық біліммен шектелмей, оны тәжірибе жүзінде қалай қолдануға болатынын зерттедік.
+        </div>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Team Member 1 -->
+            <div class="col-md-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../assets/images/aqzhan.jpeg" alt="Нариман Ақжан">
+                            <h4>Нариман Ақжан</h4>
+                            <h5>MNU, 3-курс</h5>
+                            <p class="body-large-regular">«Халықаралық құқық»</p>
+                        </div>
+                        <div class="flip-card-back">
+                            «Халықаралық құқықты» оқи отырып, жоба аясында практикалық бағытқа аса мән бердім. Талдау,
+                            құрылымдау және визуалды жеткізу – менің үлесім болды.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="col-md-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../assets/images/ayara.jpeg" alt="Амангелдіқызы Аяра">
+                            <h4>Амангелдіқызы Аяра</h4>
+                            <h5>MNU, 3-курс</h5>
+                            <p class="body-large-regular">«Құқықтану»</p>
+                        </div>
+                        <div class="flip-card-back">
+                            Тақырыпты таңдау, құқықтық нормалармен салыстыру, медиация мен партисипативті рәсімдер
+                            бөлімдерін дайындауға белсенді қатыстым.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="col-md-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../assets/images/nigina.jpeg" alt="Турлибекова Нигина">
+                            <h4>Турлибекова Нигина</h4>
+                            <h5>MNU, 3-курс</h5>
+                            <p class="body-large-regular">«Құқықтану»</p>
+                        </div>
+                        <div class="flip-card-back">
+                            Құжаттарды түсіндіру, стилистикалық редакциялау және қолданушыға ыңғайлы тілмен жазу менің
+                            міндетім болды.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 4 -->
+            <div class="col-md-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../assets/images/baqdaulet.jpeg" alt="Барат Бақдаулет">
+                            <h4>Барат Бақдаулет</h4>
+                            <h5>MNU, 3-курс</h5>
+                            <p class="body-large-regular">«Құқықтану»</p>
+                        </div>
+                        <div class="flip-card-back">
+                            Сайт құрылымын ойластыру, қолданушы тәжірибесін жақсарту және бөлімдерді логикалық реттеуге
+                            атсалыстым.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 5 -->
+            <div class="col-md-4">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <img src="../assets/images/jambo.jpeg" alt="Рымғали Жанболат">
+                            <h4>Рымғали Жанболат</h4>
+                            <h5>MNU, 3-курс</h5>
+                            <p class="body-large-regular">«Құқықтану»</p>
+                        </div>
+                        <div class="flip-card-back">
+                            Жобадағы құқықтық бөлімдердің мазмұнын сараптау, заң баптарын нақтылау және көрнекілік қосу
+                            жұмыстарымен айналыстым.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="text-center mt-5 mb-5">
+            <a href="../index.html#court-check" class="btn btn-kaz">🔙 Басты бетке оралу</a>
+        </div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+<script>
+    document.querySelectorAll('.flip-card').forEach(card => {
+        card.addEventListener('click', function () {
+            const cardInner = this.querySelector('.flip-card-inner');
+            cardInner.style.transform = cardInner.style.transform === 'rotateY(180deg)' ? '' : 'rotateY(180deg)';
+        });
+    });
+</script>
+
+</html>

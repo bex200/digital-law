@@ -1,0 +1,177 @@
+/* Reset and box-sizing */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensures padding and border don't affect element size */
+}
+
+/* Base HTML and body styles */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "EB Garamond", serif;
+}
+
+/* Headings */
+h1,
+h2 {
+    color: #2A446F;
+}
+
+h1 {
+    font-size: 6.4rem;
+    font-weight: 600;
+    letter-spacing: 0.005em;
+}
+
+h2 {
+    font-size: 4.8rem;
+    font-weight: 500;
+}
+
+h4 {
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 0.0025em;
+    color: #212121;
+}
+
+h5 {
+    font-size: 2.4rem;
+    font-weight: 400;
+    color: #616161;
+}
+
+/* Text and navigation utilities */
+.body-large-regular,
+.navlink {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: #616161;
+}
+
+.body-large-regular-light,
+h2.h2-light,
+h4.h4-light {
+    color: #FFFFFF;
+}
+
+/* Logo */
+.logo-large-name {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2A446F;
+    letter-spacing: 0.0025em;
+    margin-left: 2rem;
+    line-height: 1;
+}
+
+/* Navigation */
+.nav-item {
+    margin-left: 3rem;
+}
+
+.navlink:hover {
+    color: #2A446F;
+}
+
+/* Section backgrounds */
+.hero-section,
+.claim-section,
+.peace-section {
+    background-color: #F2F2F2;
+}
+
+.civil-law-section {
+    background-color: #FFFFFF;
+}
+
+.civil-law-section .card h4 {
+    margin-bottom: 1rem;
+}
+
+/* Cards */
+.card-img-top {
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.card-body h5 {
+    margin-bottom: 1.5rem;
+}
+
+.card-body .btn-kaz {
+    width: auto;
+    padding: 0.5rem 1.5rem;
+    align-self: start;
+}
+
+/* Buttons */
+.btn-kaz {
+    background-color: #D2A529;
+    color: white;
+    font-family: "EB Garamond", serif;
+    font-size: 2rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.5rem 1.25rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-kaz:hover {
+    background-color: #c49723;
+    color: white;
+}
+
+/* Icons */
+.claim-icon {
+    padding: 2.5em;
+    background-color: #00235d;
+    border-radius: 100%;
+}
+
+/* Peace list */
+.peace-list-item {
+    font-size: 1.8rem;
+}
+
+/* Team card */
+.team-card {
+    background-color: #FFFFFF;
+    border-left: 5px solid #D2A529;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card h4 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    color: #2A446F;
+}
+
+.team-card p {
+    font-size: 1.6rem;
+    color: #616161;
+}
+
+/* About us section */
+.about-us-section p.lead {
+    font-size: 1.8rem;
+    color: #424242;
+}
+
+/* Global section spacing */
+section {
+    margin-bottom: 50px;
+}
