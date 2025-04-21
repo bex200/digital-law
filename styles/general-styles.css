@@ -179,6 +179,9 @@ section {
 
 @media (max-width: 768px) {
     html {
-        font-size: 50%;
+        font-size: 45%;
+    }
+    h1 {
+        font-size: 5rem;
     }
 }
