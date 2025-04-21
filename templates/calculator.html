@@ -99,7 +99,7 @@
             <ol>
                 <li>Тұлға түрін таңдаңыз: жеке немесе заңды.</li>
                 <li>Өндіргіңіз келетін соманы енгізіңіз.</li>
-                <li class="body-large-regular">АЕК мөлшерін енгізіңіз (мысалы, 3450).</li>
+                <li class="body-large-regular">АЕК мөлшерін енгізіңіз (мысалы, 3932).</li>
             </ol>
             <p><strong>Мысалдар:</strong></p>
             <ul>
@@ -132,8 +132,9 @@
                 </div>
 
                 <div class="mb-3">
-                    <label for="aekAmount">АЕК мөлшері (₸):</label>
-                    <input type="number" class="form-control body-large-regular" id="aekAmount" required>
+                    <label for="aekAmount">АЕК мөлшері (2025 жылда 3932₸):</label>
+                    <input type="number" class="form-control body-large-regular" id="aekAmount" required
+                        placeholder="3932т">
                 </div>
 
 
@@ -163,14 +164,18 @@
             const resultBox = document.getElementById("resultBox");
             const warningBox = document.getElementById("warningBox");
 
+            // Set default value in the input field
+            aekInput.value = 3932;
+
             form.addEventListener("submit", function (e) {
                 e.preventDefault();
 
                 const userType = userTypeSelect.value;
                 const claimAmount = parseFloat(claimInput.value);
-                const aekValue = parseFloat(aekInput.value);
+                const aekValueInput = parseFloat(aekInput.value);
+                const aekValue = !isNaN(aekValueInput) && aekValueInput > 0 ? aekValueInput : 3932;
 
-                if (!userType || isNaN(claimAmount) || isNaN(aekValue) || claimAmount <= 0 || aekValue <= 0) {
+                if (!userType || isNaN(claimAmount) || claimAmount <= 0) {
                     resultBox.innerText = "";
                     warningBox.innerText = "Барлық өрістерді дұрыс толтырыңыз.";
                     return;
@@ -184,7 +189,7 @@
 
                 if (duty > maxDuty) {
                     resultBox.innerText = "";
-                    warningBox.innerText = `Кешіріңіз, мемлекеттік баж мөлшері шекті сомадан асты.\nСіз енгізген баж: ${Math.round(duty).toLocaleString("kk-KZ")} ₸\nРұқсат етілетін максимум: ${Math.round(maxDuty).toLocaleString("kk-KZ")} ₸`;
+                    warningBox.innerText = `Кешіріңіз, мемлекеттік баж мөлшері шекті сомадан асты.\nСіз енгізген баж: ${duty} ₸\nРұқсат етілетін максимум: ${Math.round(maxDuty).toLocaleString("kk-KZ")} ₸`;
                     return;
                 }
 
@@ -192,6 +197,7 @@
                 warningBox.innerText = "";
             });
         });
+
     </script>
 
 </body>

@@ -1,28 +1,42 @@
 <!DOCTYPE html>
 <html lang="kk">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Азаматтық істер бойынша даулар</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="../styles/general-styles.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="../styles/general-styles.css" />
   <style>
-    .accordion-button {
+    li {
+      font-size: 1.8rem;
+    }
+
+    ol>li {
+      text-decoration: underline;
+      margin: 1rem 0;
       font-size: 2rem;
-      font-weight: 500;
+    }
+
+    .accordion-button {
+      font-size: 2.2rem;
+      font-weight: 700;
       color: #2A446F;
     }
+
     .accordion-body {
-      font-size: 1.6rem;
+      margin-left: 3rem;
       color: #424242;
     }
+
     .accordion-item {
       border: none;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 2px solid #2A446F;
       margin-bottom: 1rem;
     }
   </style>
 </head>
+
 <body>
 
   <div class="container py-5">
@@ -32,18 +46,43 @@
       <!-- Азаматтық-құқықтық даулар -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingOne">
-          <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
-            1. Азаматтық-құқықтық даулар
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+            1. Азаматтық-құқықтық даулар – бұл азаматтар арасында болатын әртүрлі мүліктік және мүліктік емес даулар.
+            Бұл
+            даулардың түрлері бірнеше категорияға бөлінеді:
           </button>
         </h2>
-        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#civilLawAccordion">
+        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#civilLawAccordion">
           <div class="accordion-body">
-            <ul>
-              <li>Мүліктік даулар (қарызды өндіру, мүлікке меншік құқығын тану, залалды өтеу)</li>
+            <ol>
+              <li>Мүліктік даулар</li>
+              <ul>
+                <li>Қарызды өндіру: Егер бір адам екінші адамға қарызын төлемесе, қарызды өндіріп алу туралы мәселе
+                  туындайды.</li>
+                <li>Мүлікке меншік құқығын тану: Адамның бір дүние-мүлікке заңды иелік құқығы бар немесе жоқтығын
+                  анықтайтын даулар</li>
+                <li>Залалды өтеу: Бір адам басқа адамға зиян келтірген жағдайда, ол зиянның өтелуі туралы даулар.</li>
+              </ul>
+
               <li>Шарттық міндеттемелерден туындайтын даулар (келісімшарттарды орындамау немесе дұрыс орындамау)</li>
+              <ul>
+                <li>Келісімшарттарды орындамау немесе дұрыс орындамау: Екі тарап арасындағы келісімшарттың талаптары
+                  орындалмаған немесе дұрыс орындалмаған жағдайда туындайтын даулар.</li>
+              </ul>
               <li>Еңбек даулары (жұмыстан заңсыз босату, жалақыны төлемеу)</li>
+              <ul>
+                <li>Жұмыстан заңсыз босату: Жұмыс беруші қызметкерді заңсыз жұмыстан шығарып жіберген жағдайда
+                  туындайтын даулар.</li>
+                <li>Жалақыны төлемеу: Жұмыс берушінің қызметкерге жалақыны төлемеуі жағдайында туындаған даулар.</li>
+              </ul>
               <li>Авторлық және зияткерлік меншік құқықтарына қатысты даулар</li>
-            </ul>
+              <ul>
+                <li>Авторлық құқық: Жазушылардың, суретшілердің немесе басқа да шығармашылық еңбек иелерінің құқықтарын
+                  қорғауға қатысты туындайтын даулар.</li>
+                <li>Зияткерлік меншік: Патенттер, сауда белгілері және басқа да интеллектуалдық меншік құқықтарына
+                  қатысты мәселелер.</li>
+              </ul>
+            </ol>
           </div>
         </div>
       </div>
@@ -51,19 +90,23 @@
       <!-- Отбасылық істер -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingTwo">
-          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-            2. Отбасылық істер
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+            2. Отбасылық істер – бұл отбасы мүшелеріне қатысты даулар:
           </button>
         </h2>
-        <div id="collapseTwo" class="accordion-collapse collapse show" data-bs-parent="#civilLawAccordion">
+        <div id="collapseTwo" class="accordion-collapse " data-bs-parent="#civilLawAccordion">
           <div class="accordion-body">
-            <ul>
-              <li>Некені бұзу (ажырасу)</li>
-              <li>Ата-ана құқықтарынан айыру немесе шектеу</li>
+            <ol>
+              <li>Некені бұзу (ажырасу): Ерлі-зайыптылардың ажырасуы туралы мәселесі.</li>
+
+              <li>Ата-ана құқықтарынан айыру немесе шектеу: Ата-аналардың балаларға қатысты заңды құқықтарын шектеу
+                немесе алып қою мәселелері.</li>
               <li>Алимент өндіріп алу</li>
-              <li>Балалардың тұрғылықты жерін анықтау</li>
-              <li>Мүлікті бөлу (ерлі-зайыптылар арасында)</li>
-            </ul>
+              <li>Алимент өндіріп алу: ерлі-зайыптылар ажырасқанда ортадағы балаға, бір тараптан өндіру (ақша талап ету)
+                бойынша даулар</li>
+              <li>Балалардың тұрғылықты жерін анықтау: Балалардың кіммен және қайда тұратынын шешу.</li>
+              <li>Мүлікті бөлу: Ерлі-зайыптылар ажырасқанда, арасындағы ортақ мүлікті бөлу туралы даулар.</li>
+            </ol>
           </div>
         </div>
       </div>
@@ -71,16 +114,17 @@
       <!-- Мұрагерлік даулар -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingThree">
-          <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
-            3. Мұрагерлік даулар
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+            3. Мұрагерлік даулар – бұл адам қайтыс болғаннан кейін мұрагерін анықтау жіне мұрагерлер арасындағы мүлкін
+            бөлісу мәселелері
           </button>
         </h2>
-        <div id="collapseThree" class="accordion-collapse collapse show" data-bs-parent="#civilLawAccordion">
+        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#civilLawAccordion">
           <div class="accordion-body">
-            <ul>
+            <ol>
               <li>Мұрагерлікке құқықты тану</li>
               <li>Мұрагерлер арасында мүлікті бөлу</li>
-            </ul>
+            </ol>
           </div>
         </div>
       </div>
@@ -88,17 +132,22 @@
       <!-- Моралдық зиянды өтеу -->
       <div class="accordion-item">
         <h2 class="accordion-header" id="headingFour">
-          <button class="accordion-button " type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
-            4. Моралдық зиянды өтеу
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+            4. Моралдық зиянды өтеу – адамның моральдық, жеке немесе іскерлік беделіне келген зиянды өтету:
           </button>
         </h2>
-        <div id="collapseFour" class="accordion-collapse collapse show" data-bs-parent="#civilLawAccordion">
+        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#civilLawAccordion">
           <div class="accordion-body">
-            <ul>
-              <li>Ар-намыс, қадір-қасиет және іскерлік беделді қорғау</li>
-              <li>Жалған ақпаратты теріске шығару</li>
-              <li>Денсаулыққа зиян келтіру салдарынан өтемақы өндіру</li>
-            </ul>
+            <ol>
+              <li>Ар-намыс, қадір-қасиет және іскерлік беделді қорғау: Бір адамның ар-намысын немесе беделін кемсіту,
+                жалған ақпарат тарату мәселелерін шешу.</li>
+              <li>Жалған ақпаратты теріске шығару: Жалған ақпарат тарату арқылы адамға келтірілген зиянды жою.</li>
+              <li>Денсаулыққа зиян келтіру салдарынан өтемақы өндіру: Адамның денсаулығына келтірілген зиян үшін өтемақы
+                талап ету.
+                Жоғарыды көрсетілген мәселелердің барлығы азаматтық соттарда қаралады
+                және сіздерде осындай құқықтық дау болған жағдай да азаматтық сотқа арыз беріп өз құқықтырыңызды қорғай
+                аласыз</li>
+            </ol>
           </div>
         </div>
       </div>
@@ -108,7 +157,38 @@
       <a href="../index.html#civil-law" class="btn btn-kaz">🔙 Басты бетке оралу</a>
     </div>
   </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const hash = window.location.hash;
+
+      if (hash) {
+        const allCollapse = document.querySelectorAll('.accordion-collapse');
+        const collapseButtons = document.querySelectorAll('.accordion-button');
+
+        allCollapse.forEach(el => el.classList.remove('show'));
+        allCollapse.forEach(el => el.classList.add('collapse'));
+        collapseButtons.forEach(el => el.classList.add('collapsed'));
+
+        const target = document.querySelector(hash);
+
+        const targetButton = document.querySelector(
+          `[data-bs-target="${hash}"]`
+        );
+        console.log(targetButton)
+        console.log(collapseButtons)
+        console.log(allCollapse)
+
+        target.classList.add('show');
+
+        targetButton.classList.remove('collapsed');
+        console.log(targetButton)
+        console.log(target)
+      }
+    });
+
+  </script>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
